@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de adivinhação</title>
+</head>
+<body>
+
+    <h1>Jogo de adivinhação</h1>
+    <div id="resultado"></div>
+
+    <!-- 4. Simule o jogo de adivinhação: o jogador 1 escolhe um número entre 1 e 10;
+    o jogador 2 insere números na tentativa de acertar o número escolhido pelo jogador 1.
+    Quando ele acertar, o algortimo deverá informar que ele acertou o número x (escolhido
+    pelo jogador 1) em X tentativas (quantidade de tentativas do jogador 2). -->
+
+    <script>
+
+        let j1 = prompt("Jogador 1: Digite um número entre 1 e 10:");
+        let contador = 1;
+        if(j1<=10){
+            if (j1>=1){
+                let j2 = prompt("Jogador 2: Tente adivinhar o número que o jogador 1 digitou:");
+                while(j1!==j2){
+                    alert("Errou, tente novamente.");
+                    j2 = prompt("Jogador 2: Tente adivinhar o número que o jogador 1 digitou:");
+                    contador++;
+                }
+                    document.getElementById("resultado").innerHTML = "Acertou em " + contador + " tentativa(s).";
+                        } else {
+                            document.getElementById("resultado").innerHTML = "Número não está entre 1 e 10, iniciar o jogo novamente.";
+                        }
+        }
+
+    </script>
+
+</body>
+</html>

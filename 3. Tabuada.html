@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+
+    <!-- 3. Faça a tabuada do que o usuário escolher na tela -->
+
+    <h1>Tabuadas</h1>
+    <div id="resultado"></div>
+
+    <script>
+        let n = prompt("Digite o número da tabuada desejada: ")
+        
+
+        for(let x = 0; x < 11; x++){
+            document.getElementById("resultado").innerHTML += n + " x " + x + " = " + n * x + "<br>";
+        }
+
+
+    </script>
+
+    
+</body>
+</html>
